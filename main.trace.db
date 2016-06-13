@@ -1,0 +1,6 @@
+2016-06-13 11:07:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLAYERS" already exists; SQL statement:
+CREATE TABLE players (id IDENTITY, name VARCHAR, is_alive BOOLEAN, score INT, health DOUBLE) [42101-192]
+2016-06-13 11:09:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO PLAYERS VALUES (NULL, 'ALICE', TRUE, 0, 100 [*]"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO players VALUES (NULL, 'ALICE', TRUE, 0, 100 [42001-192]
