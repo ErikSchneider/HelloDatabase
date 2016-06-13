@@ -27,5 +27,14 @@ public class Main {
         stmt2.setString(1, name);
         stmt2.setBoolean(2, true);
         stmt2.execute();
+
+        PreparedStatement stmt3 = conn.prepareStatement("SELECT * FROM players");
+        ResultSet results = stmt3.executeQuery();
+        while (results.next()) {
+            int id = results.getInt("id");
+            String name2 = results.getString("name");
+            Boolean isAlive = results.getBoolean("is_alive");
+            System.out.println(id  + " " + name2 + " " + isAlive);
+        }
     }
 }
